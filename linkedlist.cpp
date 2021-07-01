@@ -11,6 +11,12 @@ class Node
             next=NULL;
         }
 };
+void insert_at_head(Node* &head,int val)
+{
+    Node* n=new Node(val);
+    n->next=head;
+    head=n;
+}
 void insert_at_end(Node* &head,int val)
 {
     Node* n=new Node(val);
@@ -45,6 +51,8 @@ int main()
     insert_at_end(head,9);
     insert_at_end(head,3);
     insert_at_end(head,4);
+    display(head);
+    insert_at_head(head,5);
     display(head);
     return 0;
 }
