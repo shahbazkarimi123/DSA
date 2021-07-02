@@ -45,6 +45,20 @@ void display(Node* &head)
     }
     std::cout<<std::endl;
 }
+bool search(Node* &head,int key)
+{
+    Node* temp=head;
+    while(temp!=NULL)
+    {
+        if(temp->data==key)
+        {
+            return true;
+        }
+        temp=temp->next;
+    }
+    return false;
+}
+
 int main()
 {
     Node* head=NULL;
@@ -54,5 +68,9 @@ int main()
     display(head);
     insert_at_head(head,5);
     display(head);
+    
+    std::cout<<search(head,9)<<std::endl;
+    std::cout<<search(head,8);
+
     return 0;
 }
