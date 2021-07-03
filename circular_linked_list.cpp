@@ -71,4 +71,6 @@ int main()
     insert_at_end(head,6);
     insert_at_end(head,3);
     display(head);
+    insert_at_starting(head,5);
+    display(head);
 }
