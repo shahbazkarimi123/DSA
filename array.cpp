@@ -40,6 +40,7 @@ int main()
     }
     //insert at end
     std::cout<<"\nEnter the element at beginning: ";
+    std::cin>>num;
     for(i=size-1;i>=0;i--)
     {
         a[i+1]=a[i];
