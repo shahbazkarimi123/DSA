@@ -11,6 +11,7 @@ int main()
     top=0;
     menu();
 }
+//starting menu from here.
 void menu(void)
 {
     cout<<"\nEnter one of the following options:\n";
@@ -31,6 +32,7 @@ void menu(void)
         menu();
     }
 }
+//adding a value.
 void push(void)
 {
     if(top<=9)
@@ -47,6 +49,7 @@ void push(void)
     }
     return;
 }
+//taking out value.
 void pop()
 {
     if(top>0)
@@ -61,6 +64,7 @@ void pop()
     }
     return;
 }
+//printing all value.
 void show_element()
 {
     if(top==0)
