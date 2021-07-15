@@ -75,14 +75,3 @@ int main()
     }
     inorder(root);
 }
-int main()
-{
-    Node* root=NULL;
-    insert_bst(root,5);
-    insert_bst(root,6);
-    insert_bst(root,4);
-    insert_bst(root,8);
-    insert_bst(root,1);
-    inorder(root);
-    
-}
