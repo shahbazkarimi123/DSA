@@ -63,15 +63,28 @@ int main()
 {
     Node* root=NULL;
     int size,element;
-    int i=0;
+    int i=0,z;
     cout<<"Enter the size of BST."<<endl;
     cin>>size;
-    while(i<=size)
+    while(i<size)
     {
-        cout<<"\nEnter the element";
+        cout<<"\nEnter the element ";
         cin>>element;
         root=insert_bst(root,element);
         i++;
     }
     inorder(root);
+    cout<<"\nFind your number ";
+    cin>>z;
+    if(search_in_BST(root,z)==NULL)
+    {
+        cout<<z<<"\n is not found"<<endl;
+    }
+    else
+    {
+        cout<<z<<" is found."<<endl;
+    }
+
+
+
 }
