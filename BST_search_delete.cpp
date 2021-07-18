@@ -58,6 +58,48 @@ void inorder(Node* root)
     cout<<root->data<<" ";
     inorder(root->right);
 }
+Node* inorder_Succ(Node* root)
+{
+    Node* curr=root;
+    while(curr && curr->left != NULL)
+    {
+        curr=curr->left;   
+    }
+    return curr;
+}
+
+Node* deleteInBST(Node* root,int key)
+{
+    if(root->data>key)
+    {
+        root->left=deleteInBST(root->left,key);
+    }
+    else if(root->data<key)
+    {
+        root->right=deleteInBST(root->right,key);
+    }
+    else
+    {
+        if(root->left == NULL)
+        {
+            Node* temp =root->right;
+            free(root);
+            return temp;
+        }
+        else if(root->left==NULL)
+        {
+            Node* temp=root->left;
+            free(root);
+            return temp;
+        }
+        Node* temp = inorder_Succ(root->right);
+        root->data = temp->data;
+        root->right = deleteInBST(root->right,temp->data);
+
+    }
+    return root;
+    
+}
 
 int main()
 {
@@ -84,7 +126,8 @@ int main()
     {
         cout<<z<<" is found."<<endl;
     }
-
+    deleteInBST(root,5);
+    inorder(root);
 
 
 }
