@@ -50,6 +50,8 @@ int main()
     two_way_merge(arr1, arr2, arr3, m, n);
     cout<<endl<<endl;
     input(arr3,14);
-    return 0;
+    two_way_merge(arr1,arr2,arr3,m,n);
+    input(arr2,n);
 
+    return 0;
 }
